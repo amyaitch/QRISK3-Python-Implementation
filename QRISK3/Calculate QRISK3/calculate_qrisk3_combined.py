@@ -6,10 +6,15 @@ from qrisk3_female import cvd_female_raw
 
 def calculate_qrisk3_combined():
     # Load the datasets
-    try:
-        predictions_df = pd.read_csv("/Users/amyaitchison/Desktop/MSc/Project/Practice/combined_sbp_cholesterol_predictions.csv")
-        patients_df = pd.read_csv("/Users/amyaitchison/Desktop/MSc/Project/Practice/full_patients.csv")
-        conditions_df = pd.read_csv("/Users/amyaitchison/Desktop/MSc/Project/Practice/subject_condition_presence.csv")
+
+    import os 
+    
+    base_path = os.path.join(os.path.dirname(__file__), 'data')
+
+try:
+        predictions_df = pd.read_csv(os.path.join(base_path, "combined_sbp_cholesterol_predictions.csv"))
+        patients_df = pd.read_csv(os.path.join(base_path, "full_patients.csv"))
+        conditions_df = pd.read_csv(os.path.join(base_path, "subject_condition_presence.csv"))
     except FileNotFoundError as e:
         print(f"Error loading data: {e}")
         return
