@@ -7,8 +7,14 @@ from sklearn.metrics import mean_squared_error
 import numpy as np
 
 # --- Configuration ---
-CHOLESTEROL_RATIO_FILE = '/Users/amyaitchison/Desktop/MSc/Project/GitHub/output_cholesterol_ratio.csv'
-BMI_FILE = '/Users/amyaitchison/Desktop/MSc/Project/GitHub/output_BMI.csv'
+import os
+
+BASE_DIR = os.path.dirname(__file__)
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+
+CHOLESTEROL_RATIO_FILE = os.path.join(DATA_DIR, 'output_cholesterol_ratio.csv')
+BMI_FILE = os.path.join(DATA_DIR, 'output_BMI.csv')
+
 LINK_ID_COL = 'LinkId'
 VALUE_COL = 'valueNumeric'
 BMI_LABEL = 'BMI'
