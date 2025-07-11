@@ -5,8 +5,14 @@ from sklearn.metrics import mean_squared_error
 import numpy as np
 
 # --- Configuration ---
-SBP_FILE = '/Users/amyaitchison/Desktop/MSc/Project/GitHub/output_SBP.csv'
-BMI_FILE = '/Users/amyaitchison/Desktop/MSc/Project/GitHub/output_BMI.csv'
+import os
+
+BASE_DIR = os.path.dirname(__file__)
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+
+SBP_FILE = os.path.join(DATA_DIR, 'output_SBP.csv')
+BMI_FILE = os.path.join(DATA_DIR, 'output_BMI.csv')
+
 LINK_ID_COL = 'LinkId'
 VALUE_COL = 'valueNumeric'
 SBP_LABEL = 'SystolicBloodPressure'
