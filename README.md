@@ -1,7 +1,7 @@
 This project provides a Python-based implementation of the QRISK3 cardiovascular disease score calculator. It enables users to perform QRISK3 assessments directly in Python. This is ideal for researchers working with large-scale patient-level datasets, without relying on the online tool.
 
 Setup:
-Place your input files in the data/ folder within the project directory or update the input file paths in the function to point to your desired locations before running the code.
+Place your input files in the data folder within the project directory or update the input file paths in the function to point to your desired locations before running the code.
 
 Featuress include:
 - QRISK3 score calculation: Fully automated risk score computation using the official QRISK3 algorithm.
